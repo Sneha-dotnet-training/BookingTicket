@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+<h1>Login Page</h1>
+@using (Html.BeginForm())
+{
+    <div>
+        UserName : @Html.TextBox("UserName")
+
+    </div>
+    <div>
+        Password : @Html.Password("Password")
+
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <!-- Replace the submit button with an anchor tag -->
+            @Html.ActionLink("Next", "Detail", "Detail", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}
+
